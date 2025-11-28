@@ -1,0 +1,185 @@
+:root {
+  scroll-behavior: smooth;
+  --background-color: #f7f7f7;
+  --font-color: #464545;
+}
+
+@media (min-width: 600px) {
+  html {
+    overflow: auto;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--background-color);
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  #mobile-app-bar {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+
+  #links-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  a[class="route"] {
+    color: var(--font-color);
+    text-decoration: none;
+  }
+
+  #container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+  }
+
+  h2 {
+    margin: 0px 0px 0px 125px;
+    padding: 25px 0 0 0;
+    color: #000;
+    font-size: 3rem;
+  }
+
+  /* Home */
+
+  #home-description {
+    font-size: 1.2rem;
+    margin: 75px 0px 0px 150px;
+    max-width: 450px;
+  }
+
+  #download {
+    font-size: 1.2rem;
+    color: #383838;
+    border: 1px solid #646665;
+    border-radius: 10px;
+    margin: 175px 0 0 270px ;
+    padding-block: 5px;
+    padding-inline: 15px;
+    background-color: var(--background-color);
+  }
+
+  #download:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  section {
+    width: 50%;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+  }
+
+  h4 {
+    font-size: 1.5rem
+  }
+
+  #stack-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .stack li {
+    font-size: 1.3rem;
+    list-style-type: none;
+  }
+
+  /* Education */
+
+  .educ-port-exp {
+    list-style-type: none;
+    margin: 50px 0 100px 250px;
+  }
+
+  .school-seal {
+    width: 150px;
+    float: left;
+    display: inline;
+    margin-inline-end: 25px;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+
+  .course {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  /* Portfolio */
+
+  .project-tile {
+    width: 75%;
+  }
+
+  /* Contacts */
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    margin: 50px 0px 50px 300px;
+  }
+
+  a[class*="fab"] {
+    color: var(--font-color);
+    font-size: 1.2rem;
+    margin-inline-start: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--font-color);
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 100%;
+  }
+}

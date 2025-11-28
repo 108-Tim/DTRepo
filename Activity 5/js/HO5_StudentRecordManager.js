@@ -1,5 +1,3 @@
-
-
 function processData() {
   const form = document.getElementById("form-id");
   const submitButton = document.querySelector("button[id=submit-button]");

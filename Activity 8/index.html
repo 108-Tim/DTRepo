@@ -1,10 +1,272 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <header>
+  <head>
     <title>Direcho Trabaho Calculator using Counter Function with Closures</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </header>
+    <link rel="stylesheet" href="css/HO8_Calculator.css">
+    <script src="js/HO8_Calculator.js"></script>
+  </head>
   <body>
+    <main>
+      <!-- <img src="img/bg-img.png" width="1536px" /> -->
+      <div class="calculator">
+        <div class="header-container">
+          <div id="logo-container">
+            <img id="calc-logo" src="img/win_calc_logo.svg">
+          </div>
+          <div id="title-container">
+            Calculator
+          </div>
+          <div id="command-container">
+            <div id="minimize-container">
+              <div id="minimize"></div>
+            </div>
+            <div id="restore-container">
+              <div id="restore"></div>
+            </div>
+            <div id="close-container">
+              <div id="close"></div>
+            </div>
+          </div>
+        </div>
+        <div id="mode-container">
+          <div class="selector-container" tabindex="1">
+            <div class="selector-line top"></div>
+            <div class="selector-line mid"></div>
+            <div class="selector-line bot"></div>
+          </div>
+          <div id="mode-title">
+            Scientific
+          </div>
+          <div id="history-container" tabindex="3">
+            <div id="history-logo">
+              <div id="arrow-head"></div>
+              <div id="arrow"></div>
+              <div id="arrow-helper"></div>
+              <div id="clock"></div>
+            </div>
+          </div>
+        </div>
+        <div id="display-container">
+          <div id="equation"></div>
+          <div id="input-wrapper" tabindex="2">
+            <span id="input">0</span>
+          </div>
+        </div>
+        <div id="deg-sciN-mem-container">
+          <div id="deg-sciN-container">
+            <button id="deg" tabindex="4">
+              <span>DEG</span>
+            </button>
+            <button id="sciN" tabindex="5">
+              <span>F-E</span>
+            </button>
+          </div>
+          <div id="mem-container">
+            <button class="mem" id="clear" tabindex="6" disabled>
+              <span>MC</span>
+            </button>
+            <button class="mem" id="recall" tabindex="7" disabled>
+              <span>MR</span>
+            </button>
+            <button class="mem over" id="add" tabindex="8">
+              <span>M</span>
+              <span id="psign">+</span>
+            </button>
+            <button class="mem over" id="sub" tabindex="9">
+              <span>M</span>
+              <div id="msign"></div>
+            </button>
+            <button class="mem over" id="store" tabindex="10">
+              <span>MS</span>
+            </button>
+            <button class="mem" id="history" tabindex="11" disabled>
+              <span>M</span>
+              <div id="mem-hist-arrow"></div>
+            </button>
+          </div>
+        </div>
+        <div id="calc-divider"></div>
+        <div id="trig-func-container">
+          <div id="trig-container">
+            <button id="trig-button" class="over" tabindex="12">
+              <div id="right-triangle">
+                <div id="triangle"></div>
+                <div id="angle"></div>
+              </div>
+              <span>Trigonometry</span>
+             <div class="arrow-down"></div>
+            </button>
+          </div>
+          <div id="func-container">
+            <button id="func-button" class="over" tabindex="-1">
+              <div id="f">ƒ</div>
+              <span>Function</span>
+              <div class="arrow-down"></div>
+            </button>
+          </div>
+        </div>
+        <script>
+          let calc = new Calculator();
+        </script>
+        <div class="keys-container">
+          <button id="more" class="key over" tabindex="13">
+            <span>2</span>
+            <sup>nd</sup>
+          </button>
+          <button id="pi" class="key over" tabindex="14" onclick="calc.pi()">
+            <span>π</span>
+          </button>
+          <button id="e" class="key over" tabindex="15" onclick="calc.e()">
+            <span>e</span>
+          </button>
+          <button id="clr" class="key" tabindex="16" onclick="calc.c()">
+            <span>C</span>
+          </button>
+          <button id="ce" class="key" tabindex="16" onclick="calc.ce()" hidden>
+            <span>CE</span>
+          </button>
+          <button id="bckspc" class="key" tabindex="17" onclick="calc.backspace()">
+            <div id="horizontal"></div>
+            <div id="tilted">
+              <div id="tilted-top"></div>
+              <div id="tilted-bot"></div>
+            </div>
+            <div id="x"></div>
+          </button>
+
+          <button id="square" class="key over" tabindex="18" onclick="calc.square()">
+            <var>x</var>
+            <sup>2</sup>
+          </button>
+          <button id="inverse" class="key over" tabindex="24" onclick="calc.inverse()">
+            <span>1</span>
+            <div id="fraction-bar"></div>
+            <var>x</var>
+          </button>
+          <button id="absolute" class="key over" tabindex="25" onclick="calc.absolute()">
+            <div id="abs-left"></div>
+            <var>x</var>
+            <div id="abs-right"></div>
+          </button>
+          <button id="exp" class="key over" tabindex="26">
+            <span>exp</span>
+          </button>
+          <button id="modulo" class="key over" tabindex="27" onclick="calc.operate(this)">
+            <span>mod</span>
+          </button>
+
+          <button id="root" class="key over" tabindex="19" onclick="calc.root()">
+            <sup>2</sup>
+            <span>√</span>
+            <var>x</var>
+          </button>
+          <button id="open" class="key over" tabindex="28" onclick="calc.open()">
+            <span>(</span>
+          </button>
+          <button id="close" class="key over" tabindex="29" onclick="calc.close()">
+            <span>)</span>
+          </button>
+          <button id="factorial" class="key over" tabindex="30" onclick="calc.factorial()">
+            <var>n</var><span>!</span>
+          </button>
+          <button id="division" class="key over" tabindex="31" onclick="calc.operate(this)">
+            <div></div>
+          </button>
+
+          <button id="raisedTo" class="key over" tabindex="20" onclick="calc.operate(this)">
+            <var>x<sup>y</sup></var>
+          </button>
+          <button id="seven" class="numkey" tabindex="44" onclick="calc.numkey(this)">
+            <span>7</span>
+          </button>
+          <button id="eight" class="numkey" tabindex="45" onclick="calc.numkey(this)">
+            <span>8</span>
+          </button>
+          <button id="nine" class="numkey" tabindex="46" onclick="calc.numkey(this)">
+            <span>9</span>
+          </button>
+          <button id="multiplication" class="key over" tabindex="32" onclick="calc.operate(this)">
+            <div></div>
+          </button>
+
+          <button id="tenRaisedTo" class="key over" tabindex="21" onclick="calc.tenRaisedTo()">
+            <span>10<sup><var>x</var></sup></span>
+          </button>
+          <button id="four" class="numkey" tabindex="41" onclick="calc.numkey(this)">
+            <span>4</span>
+          </button>
+          <button id="five" class="numkey" tabindex="42" onclick="calc.numkey(this)">
+            <span>5</span>
+          </button>
+          <button id="six" class="numkey" tabindex="43" onclick="calc.numkey(this)">
+            <span>6</span>
+          </button>
+          <button id="subtraction" class="key over" tabindex="33" onclick="calc.operate(this)">
+            <div></div>
+          </button>
+
+          <button id="logarithm" class="key over" tabindex="22" onclick="calc.log()">
+            <span>log</span>
+          </button>
+          <button id="one" class="numkey" tabindex="38" onclick="calc.numkey(this)">
+            <span>1</span>
+          </button>
+          <button id="two" class="numkey" tabindex="39" onclick="calc.numkey(this)">
+            <span>2</span>
+          </button>
+          <button id="three" class="numkey" tabindex="40" onclick="calc.numkey(this)">
+            <span>3</span>
+          </button>
+          <button id="addition" class="key over" tabindex="34" onclick="calc.operate(this)">
+            <div></div>
+          </button>
+
+          <button id="natlog" class="key over" tabindex="23" onclick="calc.ln()">
+            <span>ln</span>
+          </button>
+          <button id="negate" class="numkey over" tabindex="36">
+            <span>+</span>
+            <div></div>
+          </button>
+          <button id="zero" class="numkey" tabindex="37" onclick="calc.numkey(this)">
+            <span>0</span>
+          </button>
+          <button id="decimal" class="numkey over" tabindex="47" onclick="calc.decimal()">
+            <span>.</span>
+          </button>
+          <button id="equals" class="key" tabindex="35" onclick="calc.equals()">
+            <div></div>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script>
+      alert(`Notice: This is a WIP attempt to simulate the behavior of the Windows Calculator.\n\nAs of the writing of this notice, not all functionalities work as intended, but the minimum specifications of the activity (+, -, ×, and ÷) should be working.\n\nMight look better in fullscreen.`)
+      let input = document.getElementById("input");      
+      let isOverflowing = input.scrollWidth > input.offsetWidth;
+      let displayElem = document.getElementById("input");
+      let clearEquation = document.getElementById("clr");
+      let clearInput = document.getElementById("ce");
+
+      let observer = new MutationObserver(function(mutations) {
+        if (displayElem.textContent == "0") {
+          clearEquation.removeAttribute("hidden");
+          clearInput.setAttribute("hidden", "true");
+        } else if ((displayElem.textContent == "Cannot divide by zero" || displayElem.textContent == "Overflow")) {
+          console.log("no-op");
+        } else {
+          clearEquation.setAttribute("hidden", "true");
+          clearInput.removeAttribute("hidden");
+        }
+      });
+
+      observer.observe(displayElem, {
+        attributes: true,
+        childList: true,
+        characterData: true
+      })
+    </script>
   </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <header>
+    <title>Direcho Trabaho Filter & Sort a Product List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/HO13_Filter_Sort_ProductList.css">
+  </header>
+  <body>
+    <header>
+      <h1>Filter & Sort a Product List</h1>
+    </header>
+    <main>
+      <h2>Search: </h2>
+      <div id="controls-container">
+        <div id="price-container">
+          <label for="filter-price">Filter by price:</label>
+          <input type="number" id="filter-min" name="filter-price"> - 
+          <input type="number" id="filter-max" name="filter-price">
+        </div>
+        <div id="name-container">
+          <label for="filter-name">Filter by name:</label>
+          <input type="text" id="filter-name" name="filter-name">
+        </div>
+        <div id="filter-buttons-container">  
+          <button id="filter">Filter</button>
+          <button id="remove-filter">Remove filter</button>
+        </div>
+        <div id="sort-container">
+          <label for="sort">Sort by category: </label>
+          <select name="sort" id="sort">
+            <option value="ID">ID &#8595;</option>
+            <option value="ID-rev">ID  &#8593;</option>
+            <option value="name">Name &#8595;</option>
+            <option value="name-rev">Name  &#8593;</option>
+            <option value="price">Price &#8595;</option>
+            <option value="price-rev">Price  &#8593;</option>
+          </select>
+        </div>
+      </div>
+      <div id="table-container">
+        <table>
+          <thead id="table-head">
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
+      <span id="no-results" hidden>No results found.</span>
+    </main>
+    <script src="js/HO13_Filter_Sort_ProductList.js"></script>
+  </body>
+</html>

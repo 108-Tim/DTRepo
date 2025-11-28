@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <header>
+  <head>
     <title>Direcho Trabaho Color Picker</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </header>
+    <link rel="stylesheet" href="css/HO9_Color_Picker.css">
+  </head>
   <body>
-    
+    <header>
+      <h1>Customizable Webpage</h1>
+    </header>
+    <main>
+      <div id="left">
+        <div id="bg-color">
+          <label for="bg-color-picker">Change background color: </label>
+          <input type="color" name="bg-color-picker" id="bg-color-picker" value="#7fffd4">
+        </div>
+        <div id="para-color">
+          <label for="para-color-picker">Change paragraph color: </label>
+          <input type="color" name="para-color-picker" id="para-color-picker">
+          <p id="p-color-change">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet reiciendis dolor esse animi minus labore ducimus nostrum eaque quam harum, temporibus, aliquam nemo non aperiam consequuntur dolorum repellat laborum cupiditate?</p>
+        </div>
+        <div id="text-content">
+          <label for="change-text-content">Change text content: </label>
+          <textarea name="change-text-content" id="change-text-content"></textarea>
+          <button onclick="change_text()">Change</button>
+          <p id="p-text-change">This is a sample paragraph.</p>
+        </div>
+      </div>
+      
+      <div id="img-change">
+        <label for="change-image-source">Replace an image: </label>
+        <img id="image-wrapper" src="img/acer1.jpg" alt="This is an image wrapper." width="720px">
+        <button name="change-image-source" onclick="change_img()">Change with local</button>
+        <label for="web-source">Or provide a link for an online source: </label>
+        <input type="text" name="web-source" id="web-source">
+        <button name="change-web-source" onclick="change_link()">Change with link</button>
+      </div>
+    </main>
+    <script src="js/HO9_Color_Picker.js"></script>
   </body>
 </html>
-
-<!-- Create a page that has color picker
-
-1. Click-to-change background color
-2. The color of a paragraph,
-3. Replace text inside a <div>,
-4. and replaces an image.
-
-Due: October 25, 2025 -->

@@ -4,8 +4,40 @@
     <title>Direcho Trabaho Character Counter Application</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/HO10_Character_Counter.css">
   </header>
   <body>
+    <header>
+      <h1>Character Counter</h1>
+    </header>
+    <main>
+      <dialog id="additional-info">
+        <h2>Character Count</h2>
+        <div id="count-container">
+          <div id="char">
+            <p>Characters</p>
+            <p id="char-count-modal"></p>
+          </div>
+          <hr />
+          <div id="no-space">
+            <p>Characters excluding spaces	</p>
+            <p id="char-count-no-whitespace"></p>
+          </div>
+          <hr />
+          <div id="words">
+            <p>Words</p>
+            <p id="word-count"></p>
+          </div>
+        </div>
+        <button id="close-modal">Close</button>
+      </dialog>
+      <div id="text-area-container">
+        <textarea name="text-area" id="text-area"></textarea>
+        <p id="char-count"></p>
+        <button id="show-char-count">Count</button>
+      </div>
+    </main>
+    <script src="js/HO10_Character_Counter.js"></script>
   </body>
 </html>
 
