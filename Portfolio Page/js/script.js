@@ -97,13 +97,13 @@ function showEducation() {
   <h2>Education</h2>
   <ul>
     <li class="educ-port-exp">
-      <img src="DTRepo/DTRepo/Portfolio Page/img/UP-Seal.png" class="school-seal"  alt="Seal of the University of the Philippines Diliman" />
+      <img src="img/UP-Seal.png" class="school-seal"  alt="Seal of the University of the Philippines Diliman" />
       <h3 class="school">University of the Philippines Diliman</h3>
       <p class="educ-p course">Bachelor of Science in Computer Science</p>
       <p class="educ-p">2018-2025</p>
     </li>
     <li class="educ-port-exp">
-      <img src="DTRepo/DTRepo/Portfolio Page/img/QueSci-Seal.png" class="school-seal" alt="Seal of Quezon City Science High School" />
+      <img src="img/QueSci-Seal.png" class="school-seal" alt="Seal of Quezon City Science High School" />
       <h3 class="school">Quezon City Science High School</h3>
       <p class="educ-p">2012-2018</p>
     </li>
@@ -129,16 +129,16 @@ function showPortfolio() {
         <div class="techs-used">
           <ul>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/html5-logo.svg" class="tech-logo" alt="HTML5 Logo">
+              <img src="img/html5-logo.svg" class="tech-logo" alt="HTML5 Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
+              <img src="img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/javascript-logo.svg" class="tech-logo big" alt="JavaScript Logo">
+              <img src="img/javascript-logo.svg" class="tech-logo big" alt="JavaScript Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
+              <img src="img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
             </li>
           </ul>
         </div>
@@ -157,10 +157,10 @@ function showPortfolio() {
         <div class="techs-used">
           <ul>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
+              <img src="img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
+              <img src="img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
             </li>
           </ul>
         </div>
