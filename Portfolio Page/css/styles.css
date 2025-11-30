@@ -8,7 +8,6 @@
   html {
     overflow: auto;
     width: 100vw;
-    height: 50px;
     background-color: var(--background-color);
   }
 
@@ -23,7 +22,7 @@
     width: 100%;
   }
 
-  #mobile-app-bar {
+  #app-bar, #app-bar-button {
     display: none;
   }
 
@@ -45,6 +44,25 @@
   a[class="route"] {
     color: var(--font-color);
     text-decoration: none;
+    position: relative;
+  }
+
+  a[class="route"]:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -0.25rem;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--font-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  a[class="route"]:hover:after {
+    width: 100%; 
+    left: 0; 
   }
 
   #container {
@@ -60,26 +78,35 @@
     font-size: 3rem;
   }
 
+  li {
+    list-style-type: none;
+  }
+
   /* Home */
 
   #home-description {
     font-size: 1.2rem;
-    margin: 75px 0px 0px 150px;
+    margin: 100px 0px 0px 150px;
     max-width: 450px;
   }
 
   #download {
+    display: inline-block;
+    margin-inline-start: 280px;
+    margin-block-start: 150px;
+  }
+
+  a button {
     font-size: 1.2rem;
     color: #383838;
     border: 1px solid #646665;
     border-radius: 10px;
-    margin: 175px 0 0 270px ;
     padding-block: 5px;
     padding-inline: 15px;
     background-color: var(--background-color);
   }
 
-  #download:hover {
+  a button:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -103,14 +130,21 @@
 
   .stack li {
     font-size: 1.3rem;
-    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-inline-start: -40px;
+    margin-block: 20px;
+  }
+
+  .tech-logo {
+    width: 40px;
+    margin-inline-end: 20px;
   }
 
   /* Education */
 
   .educ-port-exp {
-    list-style-type: none;
-    margin: 50px 0 100px 250px;
+    margin: 50px 0 0px 250px;
   }
 
   .school-seal {
@@ -141,6 +175,10 @@
     width: 75%;
   }
 
+  .techs-used ul{
+    display: flex;
+  }
+
   /* Contacts */
 
   .contact-container {
@@ -155,31 +193,285 @@
     margin: 50px 0px 50px 300px;
   }
 
-  a[class*="fab"] {
+  .contact-container a {
     color: var(--font-color);
-    font-size: 1.2rem;
-    margin-inline-start: 50px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+  }
+
+  .contact-container a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -0.25rem;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--font-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  .contact-container a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  a[class*="fab"] {
+    font-size: 1.4rem;
+    margin-inline: 50px 10px;
   }
 }
+
+/* ---------------------------------------------- */
 
 @media (max-width: 600px) {
   html {
     overflow: auto;
     width: 100vw;
-    height: 100vh;
     background-color: var(--background-color);
-    color: var(--font-color);
   }
 
   body {
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   main {
     width: 100%;
+  }
+  
+  #app-bar {
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+  }
+
+  .line {
+    width: 1.75rem;
+    height: 0.25rem;
+    background-color: #383838;
+    border-radius: 10rem;
+    margin-block: 0.5vh;
+  }
+
+  #app-bar-button {
+    width: 2.25rem;
+    height: 2rem;
+    position: absolute;
+    top: 4.5vh;
+    right: 4.5vh;
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+  }
+
+  #nav-wrapper {
+    position: absolute;
+    transform: translate(100%);
+    transition-duration: 500ms;
+    z-index: 2;
+    background-color: transparent;
+    background-color: var(--background-color);
+  }
+
+  #nav-wrapper.active {
+    transform: none;
+  }
+
+  #close-nav {
+    width: 2.25rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5vh;
+    right: 4.5vh;
+    border: none;
+    z-index: 3;
+  }
+
+  #close-nav:after {
+    content: "\D7";
+    width: 2.25rem;
+    height: 2rem;
+    color: var(--font-color);
+    font-size: 4rem;
+  }
+
+  nav {
+    width: 100vw;
+    height: 100vh;
+    transition-duration: 600ms; 
+  }
+
+  #links-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.25rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block-start: 17.5vh;
+  }
+
+  a[class="route"] {
+    width: fit-content;
+    color: var(--font-color);
+    text-decoration: none;
+    margin-block: 2.25vh;
+  }
+
+  #container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-block: 15vh 10vh;
+    color: #000;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  /* Home */
+
+  #home-description {
+    font-size: 1rem;
+    max-width: 80vw;
+    margin-inline: auto;
+    margin-block-end: 7.5vh;
+  }
+
+  #download {
+    display: inline-block;
+    margin-block: 7.5vh;
+    margin-inline: auto;
+  }
+
+  a button {
+    font-size: 1.2rem;
+    color: #383838;
+    border: 1px solid #646665;
+    border-radius: 10px;
+    padding-block: 5px;
+    padding-inline: 15px;
+    background-color: var(--background-color);
+  }
+
+  a button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  section {
+    width: 90vw;
+    margin-inline-start: 5vw;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem
+  }
+
+  #stack-container {
+    margin-inline-start: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .stack li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-inline-start: -40px;
+    margin-block: 20px;
+  }
+
+  .tech-logo {
+    width:7.5vw;
+    margin-inline-end: 20px;
+  }
+
+  /* Education */
+  .educ-port-exp {
+    margin: 0;
+  }
+
+  .school-seal {
+    width: 15vw;
+    float: left;
+    display: inline;
+    margin-inline-end: 2.5vw;
+  }
+
+  .school {
+    font-size: 1.5rem;
+  }
+
+  p {
+    width: 80%;
+  }
+
+  .course {
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .educ-p {
+    font-size: 1rem;
+    margin-inline-start: 20vw;
+  }
+
+  /* Portfolio */
+
+  .project-tile {
+    width: 80vw;
+  }
+
+  .project-tile p {
+    width: 100%;
+  }
+
+  .techs-used ul{
+    display: flex;
+  }
+
+  /* Contacts */
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    margin-inline-start: 7.5vw;
+  }
+
+  a[class*="fab"] {
+    font-size: 1.1rem;
+    margin-inline: 5vw 1.5vw;
+  }
+  
+  .contact-container a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 1.1rem;
   }
 }

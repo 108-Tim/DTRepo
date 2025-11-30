@@ -8,57 +8,108 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
   </head>
   <body>
-    <button id="mobile-app-bar"></button>
-    <nav>
-      <div id="links-container">
-        <a href="/" class="route">About Me</a>
-        <a href="/education" class="route">Education</a>
-        <a href="/portfolio" class="route">Portfolio</a>
-        <a href="/experiences" class="route">Experiences</a>
-        <a href="/contacts" class="route">Contacts</a>
-      </div>
-    </nav>
+    <div id="app-bar">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <button id="app-bar-button"></button>
+    <div id="nav-wrapper">
+      <nav>
+        <div id="close-nav"></div>
+        <div id="links-container">
+          <a href="/" class="route">About Me</a>
+          <a href="/education" class="route">Education</a>
+          <a href="/portfolio" class="route">Portfolio</a>
+          <a href="/experiences" class="route">Experiences</a>
+          <a href="/contacts" class="route">Contacts</a>
+        </div>
+      </nav>
+    </div>
     <main>
       <div id="container">
         <h2>Timothy Magno</h2>
-        <p id="home-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <section>
-          <h3>Tech Stack</h3>
-          <div id="stack-container">
-            <div>
-              <h4>Knowledgeable</h4>
-              <ul class="stack">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Python</li>
-                <li>Arduino</li>
-                <li>C</li>
-                <li>C++</li>
-                <li>Assembly Language</li>
-              </ul>
+          <p id="home-description">
+            Greetings! I am an aspiring full-stack developer currently learning the fundamentals of front-end development to kick-start my 
+            developer journey. Although I do not possess the creativity for UI/UX design, my passion lies in having the scrupulousness and 
+            determination to produce correct and satisfactory results, as well as to perfectly and cleanly materialize the designer's 
+            vision of the product. Still, passion and perseverance can only take me part of the way without the relevant experiences, which 
+            is why I am also open to being trained. If you are interested, let's talk! 
+          </p>
+          <section>
+            <h3>Tech Stack</h3>
+            <div id="stack-container">
+              <div>
+                <h4>Knowledgeable</h4>
+                <ul class="stack">
+                  <li id="html">
+                    <img src="img/html5-logo.svg" class="tech-logo" alt="HTML5 Logo">
+                    <span>HTML</span>
+                  </li>
+                  <li>
+                    <img src="img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
+                    <span>CSS</span>
+                  </li>
+                  <li>
+                    <img src="img/python-logo.svg" class="tech-logo" alt="Python Logo">
+                    <span>Python</span>
+                  </li>
+                  <li>
+                    <img src="img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
+                    <span>Arduino</span></li>
+                  <li>
+                    <img src="img/c-logo.svg" class="tech-logo" alt="C Programming Language Logo">
+                    <span>C</span>                  
+                  </li>
+                  <li>
+                    <img src="img/cpp-logo.svg" class="tech-logo" alt="C++ Logo">
+                    <span>C++</span>                  
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Learning</h4>
+                <ul class="stack">
+                  <li class="h">
+                    <img src="img/javascript-logo.svg" class="tech-logo" alt="JavaScript Logo">
+                    <span>JavaScript</span>
+                  </li>
+                  <li>
+                    <img src="img/tailwindcss-logo.svg" class="tech-logo" alt="Tailwind CSS Logo">
+                    <span>Tailwind CSS</span>
+                  </li>
+                  <li>
+                    <img src="img/react-logo.svg" class="tech-logo" alt="React JS Logo">
+                    <span>React</span>
+                  </li>
+                  <li>
+                    <img src="img/nodejs-logo.svg" class="tech-logo" alt="Node JS Logo">
+                    <span>Node.js</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Tools</h4>
+                <ul class="stack">
+                  <li>
+                    <img src="img/visual-studio-code-logo.svg" class="tech-logo" alt="Visual Studio Code Logo">
+                    <span>Visual Studio Code</span>
+                  </li>
+                  <li>
+                    <img src="img/figma-logo.svg" class="tech-logo" alt="Figma Logo">
+                    <span>Figma</span>
+                  </li>
+                  <li>
+                    <img src="img/github-logo.svg" class="tech-logo" alt="Github Logo">
+                    <span>Github</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4>Learning</h4>
-              <ul class="stack">
-                <li>JavaScript</li>
-                <li>Tailwind CSS</li>
-                <li>React</li>
-                <li>Node.js</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Tools</h4>
-              <ul class="stack">
-                <li>Visual Studio Code</li>
-                <li>Figma</li>
-                <li>GitHub</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <a href="pdf/Magno_Timothy_CV.pdf" download="Magno_Timothy_CV">
-          <button id="download">Download CV</button>
-        </a>
+          </section>
+          <a href="pdf/Magno_Timothy_CV.pdf" id="download" download="Magno_Timothy_CV">
+            <button>Download CV</button>
+          </a>
       </div>
     </main>
     <script src="js/script.js"></script>
