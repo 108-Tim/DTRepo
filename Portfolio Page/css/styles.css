@@ -141,6 +141,10 @@
     margin-inline-end: 20px;
   }
 
+  .big {
+    width: 33px;
+  }
+
   /* Education */
 
   .educ-port-exp {
@@ -404,6 +408,10 @@
   .tech-logo {
     width:7.5vw;
     margin-inline-end: 20px;
+  }
+
+  .big {
+    width: 6.3vw;
   }
 
   /* Education */

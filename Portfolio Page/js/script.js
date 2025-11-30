@@ -10,11 +10,11 @@ function showHome() {
   return `
   <h2>Timothy Magno</h2>
   <p id="home-description">
-  Greetings! I am an aspiring full-stack developer currently learning the fundamentals of front-end development to kick-start my 
-  developer journey. Although I do not possess the creativity for UI/UX design, my passion lies in having the scrupulousness and 
-  determination to produce correct and satisfactory results, as well as to perfectly and cleanly materialize the designer's 
-  vision of the product. Still, passion and perseverance can only take me part of the way without the relevant experiences, which 
-  is why I am also open to being trained. If you are interested, let's talk!
+    Greetings! I am an aspiring full-stack developer currently learning the fundamentals of front-end development to kick-start my 
+    developer journey. Although I do not possess the creativity for UI/UX design, my passion lies in having the scrupulousness and 
+    determination to produce correct and satisfactory results, as well as to perfectly and cleanly materialize the designer's 
+    vision of the product. Still, passion and perseverance can only take me part of the way without the relevant experiences, which 
+    is why I am also open to being trained. If you are interested, let's talk! 
   </p>
   <section>
     <h3>Tech Stack</h3>
@@ -23,26 +23,26 @@ function showHome() {
         <h4>Knowledgeable</h4>
         <ul class="stack">
           <li id="html">
-            <img src="DTRepo/DTRepo/Portfolio Page/img/html5-logo.svg" class="tech-logo" alt="HTML5 Logo">
+            <img src="img/html5-logo.svg" class="tech-logo" alt="HTML5 Logo">
             <span>HTML</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
+            <img src="img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
             <span>CSS</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/python-logo.svg" class="tech-logo" alt="Python Logo">
+            <img src="img/python-logo.svg" class="tech-logo" alt="Python Logo">
             <span>Python</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
+            <img src="img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
             <span>Arduino</span></li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/c-logo.svg" class="tech-logo" alt="C Programming Language Logo">
+            <img src="img/c-logo.svg" class="tech-logo big" alt="C Programming Language Logo">
             <span>C</span>                  
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/cpp-logo.svg" class="tech-logo" alt="C++ Logo">
+            <img src="img/cpp-logo.svg" class="tech-logo" alt="C++ Logo">
             <span>C++</span>                  
           </li>
         </ul>
@@ -51,19 +51,19 @@ function showHome() {
         <h4>Learning</h4>
         <ul class="stack">
           <li class="h">
-            <img src="DTRepo/DTRepo/Portfolio Page/img/javascript-logo.svg" class="tech-logo" alt="JavaScript Logo">
+            <img src="img/javascript-logo.svg" class="tech-logo big" alt="JavaScript Logo">
             <span>JavaScript</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/tailwindcss-logo.svg" class="tech-logo" alt="Tailwind CSS Logo">
+            <img src="img/tailwindcss-logo.svg" class="tech-logo big" alt="Tailwind CSS Logo">
             <span>Tailwind CSS</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/react-logo.svg" class="tech-logo" alt="React JS Logo">
+            <img src="img/react-logo.svg" class="tech-logo big" alt="React JS Logo">
             <span>React</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/nodejs-logo.svg" class="tech-logo" alt="Node JS Logo">
+            <img src="img/nodejs-logo.svg" class="tech-logo big" alt="Node JS Logo">
             <span>Node.js</span>
           </li>
         </ul>
@@ -72,15 +72,15 @@ function showHome() {
         <h4>Tools</h4>
         <ul class="stack">
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/visual-studio-code-logo.svg" class="tech-logo" alt="Visual Studio Code Logo">
+            <img src="img/visual-studio-code-logo.svg" class="tech-logo big" alt="Visual Studio Code Logo">
             <span>Visual Studio Code</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/figma-logo.svg" class="tech-logo" alt="Figma Logo">
+            <img src="img/figma-logo.svg" class="tech-logo big" alt="Figma Logo">
             <span>Figma</span>
           </li>
           <li>
-            <img src="DTRepo/DTRepo/Portfolio Page/img/github-logo.svg" class="tech-logo" alt="Github Logo">
+            <img src="img/github-logo.svg" class="tech-logo big" alt="Github Logo">
             <span>Github</span>
           </li>
         </ul>
@@ -135,10 +135,10 @@ function showPortfolio() {
               <img src="DTRepo/DTRepo/Portfolio Page/img/css3-logo.svg" class="tech-logo" alt="CSS3 Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/javascript-logo.svg" class="tech-logo" alt="JavaScript Logo">
+              <img src="DTRepo/DTRepo/Portfolio Page/img/javascript-logo.svg" class="tech-logo big" alt="JavaScript Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo" alt="Firebase Logo">
+              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
             </li>
           </ul>
         </div>
@@ -160,7 +160,7 @@ function showPortfolio() {
               <img src="DTRepo/DTRepo/Portfolio Page/img/arduino-logo.svg" class="tech-logo" alt="Arduino Logo">
             </li>
             <li>
-              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo" alt="Firebase Logo">
+              <img src="DTRepo/DTRepo/Portfolio Page/img/firebase-logo.svg" class="tech-logo big" alt="Firebase Logo">
             </li>
           </ul>
         </div>
