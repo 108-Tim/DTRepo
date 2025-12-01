@@ -232,21 +232,30 @@
 
 @media (max-width: 600px) {
   html {
-    overflow: auto;
     width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
     background-color: var(--background-color);
   }
 
   body {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .hidden {
+    overflow-y: hidden;
   }
 
   main {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
   }
   
   #app-bar {
@@ -275,7 +284,7 @@
   }
 
   #nav-wrapper {
-    position: absolute;
+    position: relative;
     transform: translate(100%);
     transition-duration: 500ms;
     z-index: 2;
@@ -308,7 +317,7 @@
   nav {
     width: 100vw;
     height: 100vh;
-    transition-duration: 600ms; 
+    transition-duration: 600ms;
   }
 
   #links-container {

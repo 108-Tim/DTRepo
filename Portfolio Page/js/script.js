@@ -4,9 +4,16 @@ const navWrapper = document.getElementById("nav-wrapper");
 
 appBarButton.addEventListener("click", () => {
   navWrapper.classList.toggle("active");
-})
+  toggleNavBar();
+});
+
+function toggleNavBar() {
+  document.querySelector("html").classList.toggle("hidden");
+  document.querySelector("body").classList.toggle("hidden");
+};
 
 function showHome() {
+  toggleNavBar();
   return `
   <h2>Timothy Magno</h2>
   <p id="home-description">
@@ -93,6 +100,7 @@ function showHome() {
 }
 
 function showEducation() {
+  toggleNavBar();
   return `
   <h2>Education</h2>
   <ul>
@@ -111,6 +119,7 @@ function showEducation() {
 }
 
 function showPortfolio() {
+  toggleNavBar();
   return `
   <h2>Portfolio</h2>
   <ul>
@@ -170,6 +179,7 @@ function showPortfolio() {
 }
 
 function showExperiences() {
+  toggleNavBar();
   return `
   <h2>Work Experiences</h2>
   <ul>
@@ -183,6 +193,7 @@ function showExperiences() {
 }
 
 function showContacts() {
+  toggleNavBar();
   return `
   <h2>Contacts</h2>
   <div class="contact-container">
